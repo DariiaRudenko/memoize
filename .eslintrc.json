@@ -1,0 +1,16 @@
+{
+  "extends":  "airbnb-base",
+ "env":{
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off"
+},
+  "overrides": [
+    {
+      "files": [ "*.js"],
+      "excludedFiles": "./src/memoize.spec.js"
+    }
+  ]
+ }

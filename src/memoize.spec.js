@@ -1,7 +1,8 @@
+/* eslint-disable */
 import {describe, beforeEach, it} from 'mocha';
 import {expect} from 'chai';
 import sinon from 'sinon';
-import {memoize} from './memoize';
+import { memoize } from './memoize.js'
 
 describe('memoize', () => {
     it('should be a function', () => {
@@ -50,8 +51,11 @@ describe('memoize', () => {
         });
 
         it('delegates calls to the target function', () => {
+            console.log(memoizedAbs(0,1));
             expect(memoizedAbs(0, 1)).to.equal(1);
+            console.log(memoizedAbs(3, 4));
             expect(memoizedAbs(3, 4)).to.equal(5);
+            console.log(memoizedGrep(/\d+/, 'abc', '123', 'def'));
             expect(memoizedGrep(/\d+/, 'abc', '123', 'def')).to.deep.equal(['123']);
         });
 
